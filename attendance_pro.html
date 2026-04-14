@@ -915,25 +915,7 @@ tbody tr:hover td{background:var(--surface2)}
     <input class="filter-input" id="octSearchInput" placeholder="🔍 Search name or mobile across all October schools..." oninput="octSearchText=this.value;renderMercuryTable()">
   </div>
 
-  <!-- ── Table 1: Osaka Bio-Medical College ── -->
-  <div style="margin-bottom:34px">
-    <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px;flex-wrap:wrap;gap:10px;border-left:4px solid var(--gold);padding-left:14px">
-      <div>
-        <div style="font-family:'DM Serif Display',serif;font-size:1.2rem;font-weight:700;color:var(--gold);line-height:1.2;word-wrap:break-word">🏫 Osaka Bio-Medical College</div>
-        <div style="font-size:12px;color:var(--text3);margin-top:4px">October 2026 Intake</div>
-      </div>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
-        <button class="btn btn-outline" style="font-size:12px;padding:5px 12px" onclick="octPrintSchool('osaka')">🖨 Print</button>
-        <button class="btn btn-outline" style="font-size:12px;padding:5px 12px" onclick="octExportSchool('osaka')">↓ Export</button>
-        <button class="btn-primary" style="font-size:12px;padding:6px 14px;background:var(--gold);border:none" onclick="openAddOctSchool('osaka')">+ Add Student</button>
-      </div>
-    </div>
-    <div class="table-wrap"><div class="table-scroll">
-      <table><thead><tr>
-        <th>SN</th><th>Name</th><th>Phone Number</th><th>COE</th><th>VFS</th><th>NOC</th><th>Fees</th><th>Flight</th><th>Actions</th>
-      </tr></thead><tbody id="tbody-school-osaka"></tbody></table>
-    </div></div>
-  </div>
+
 
   <!-- ── Table 2: Okazaki Japanese Language School ── -->
   <div style="margin-bottom:34px">
@@ -1894,50 +1876,50 @@ function setTab(tab){
   if(tab==='checklists') renderChecklists();
 }
 
-// ─── UPDATED SEED DATA ────────────────────────────────
 const SEED=[
- {id:'r1',name:'Amit Kumar Sharma',number:'9811000629/9768813791',email:'siddharthamit947@gmail.com',type:'Study',sensei:'Manoj Sensei',time:'06:30',lesson:'Lesson 20',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
- {id:'r2',name:'Amrit Rai',number:'9848802553',email:'aamritrai140@gmail.com',type:'Study',sensei:'Manoj Sensei',time:'06:30',lesson:'Lesson 20',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'5650',due:'11300',total:'16950',assign:'',track:''},
- {id:'r3',name:'Anusa Ale',number:'9863440442',email:'anushaale88@gmail.com',type:'Study',sensei:'Manoj Sensei',time:'09:00',lesson:'Lesson 34',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'58250',due:'11300',total:'69550',assign:'',track:''},
- {id:'r4',name:'Asmita Thapa',number:'9813351795',email:'thapaasmita152@gmail.com',type:'Study',sensei:'Manoj Sensei',time:'09:00',lesson:'Lesson 34',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'28550',due:'11000',total:'39550',assign:'',track:''},
- {id:'r5',name:'Bibek Maharjan',number:'9860924115',email:'bibek.maharjan185@gmail.com',type:'Work',sensei:'Arjun Sensei',time:'07:30',lesson:'Lesson 3',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
- {id:'r6',name:'Binita Tamang',number:'9745682786',email:'',type:'Work',sensei:'Arjun Sensei',time:'07:30',lesson:'Lesson 3',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
- {id:'r7',name:'Dinisha Sunar',number:'9744474045',email:'dinishaagri@gmail.com',type:'Work',sensei:'Manoj Sensei',time:'06:30',lesson:'Lesson 20',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'11000',due:'5950',total:'16950',assign:'',track:''},
- {id:'r8',name:'Dipak Mandal',number:'9824346584',email:'dmdeepak505@gmail.com',type:'Study',sensei:'Manoj Sensei',time:'06:30',lesson:'Lesson 20',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
- {id:'r10',name:'Ganesh Sah',number:'9702973919',email:'gsah41379@gmail.com',type:'Study',sensei:'Manoj Sensei',time:'06:30',lesson:'Lesson 20',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'5650',due:'11300',total:'16950',assign:'',track:''},
- {id:'r11',name:'Jaya Biswokarma',number:'9700193622',email:'jayasunar0927@gmail.com',type:'Study',sensei:'Manoj Sensei',time:'06:30',lesson:'Lesson 20',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'15000',due:'1950',total:'16950',assign:'',track:''},
- {id:'r12',name:'Jeebika Pun Magar',number:'9762225941',email:'',type:'Study',sensei:'Manoj Sensei',time:'07:45',lesson:'Lesson 7',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
- {id:'r13',name:'Kiran Kumari Khutal Magar',number:'9869810717',email:'',type:'Work',sensei:'Arjun Sensei',time:'07:30',lesson:'Lesson 3',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
- {id:'r14',name:'Kripa Sunar',number:'9768839316',email:'kripabk29@gmail.com',type:'Work',sensei:'Manoj Sensei',time:'07:45',lesson:'Lesson 7',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'15000',due:'0',total:'15000',assign:'',track:''},
- {id:'r15',name:'Krishna Bahadur Khadka',number:'9847371971/9808327254',email:'kbha78985@gmail.com',type:'Work',sensei:'Manoj Sensei',time:'06:30',lesson:'Lesson 20',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
- {id:'r16',name:'Manju Gurung',number:'9824258853',email:'manjugurung595@gmail.com',type:'Study',sensei:'Manoj Sensei',time:'07:45',lesson:'Lesson 7',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
- {id:'r17',name:'Menuka Kushwar',number:'9765966171/9813626517',email:'menukakuswar0@gmail.com',type:'Study',sensei:'Manoj Sensei',time:'07:45',lesson:'Lesson 7',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'5650',due:'11300',total:'16950',assign:'',track:''},
- {id:'r18',name:'Prashant Kumar Mishra',number:'9817687600',email:'pm488308@gmail.com',type:'Work',sensei:'Manoj Sensei',time:'09:00',lesson:'Lesson 34',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'22600',due:'0',total:'22600',assign:'',track:''},
- {id:'r19',name:'Puja Thapa',number:'9749211550',email:'pujat0330@gmail.com',type:'Work',sensei:'Manoj Sensei',time:'06:30',lesson:'Lesson 20',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'11000',due:'0',total:'11000',assign:'',track:''},
- {id:'r20',name:'Raj Pakhoin Lama',number:'9707127289',email:'lraj4104@gmail.com',type:'Work',sensei:'Manoj Sensei',time:'07:45',lesson:'Lesson 7',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
- {id:'r21',name:'Raj Singh',number:'9829966460/9805713917',email:'rajsngh3212@gmail.com',type:'Study',sensei:'Manoj Sensei',time:'06:30',lesson:'Lesson 20',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'7910',due:'11300',total:'19210',assign:'',track:''},
- {id:'r22',name:'Rajindra Koirala',number:'9867056383',email:'',type:'Work',sensei:'Manoj Sensei',time:'07:45',lesson:'Lesson 7',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'15255',due:'0',total:'15255',assign:'',track:''},
- {id:'r23',name:'Raju Ghale',number:'9862907196',email:'ghaleraju@03gmail.com',type:'Work',sensei:'Manoj Sensei',time:'06:30',lesson:'Lesson 20',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
- {id:'r24',name:'Raju Karki',number:'9713718743',email:'',type:'Work',sensei:'Arjun Sensei',time:'06:30',lesson:'Basic',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'14407',due:'0',total:'14407',assign:'',track:''},
- {id:'r25',name:'Raju Tamang',number:'9768383981',email:'',type:'Work',sensei:'Manoj Sensei',time:'07:45',lesson:'Lesson 7',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
- {id:'r26',name:'Ram Tamang',number:'9767294174',email:'ramtg324@gmail.com',type:'Study',sensei:'Manoj Sensei',time:'06:30',lesson:'Lesson 20',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'0',due:'16950',total:'16950',assign:'',track:''},
- {id:'r27',name:'Rohene Sewa',number:'9744291509',email:'rohinisewa73@gmail.com',type:'Work',sensei:'Manoj Sensei',time:'06:30',lesson:'Lesson 20',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
- {id:'r28',name:'Sabin Shivabhakti',number:'9803583066',email:'',type:'Study',sensei:'Arjun Sensei',time:'11:45',lesson:'Lesson 5',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
- {id:'r29',name:'Santosh Raut',number:'9829984236',email:'',type:'Work',sensei:'Manoj Sensei',time:'07:45',lesson:'Lesson 7',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'15000',due:'1650',total:'16650',assign:'',track:''},
- {id:'r30',name:'Sapana Thapa Magar',number:'9849806290',email:'magarsapana974@gmail.com',type:'Work',sensei:'Manoj Sensei',time:'06:30',lesson:'Lesson 20',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
- {id:'r31',name:'Sharada Thapa',number:'9813271767',email:'thapa.sharada43@gmail.com',type:'Work',sensei:'Arjun Sensei',time:'07:30',lesson:'Lesson 3',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
- {id:'r32',name:'Sita Karki',number:'9869637883',email:'',type:'Work',sensei:'Arjun Sensei',time:'07:30',lesson:'Lesson 3',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
- {id:'r33',name:'Sujan Kami',number:'9866090804',email:'',type:'Study',sensei:'Arjun Sensei',time:'06:40',lesson:'Lesson 8',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'5650',due:'11300',total:'16950',assign:'',track:''},
- {id:'r34',name:'Sumitra Bal Tamang',number:'9802324497',email:'',type:'Work',sensei:'Arjun Sensei',time:'06:30',lesson:'Basic',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
- {id:'r35',name:'Sumitra Shrestha',number:'9709196853',email:'',type:'Work',sensei:'Arjun Sensei',time:'06:30',lesson:'Basic',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
- {id:'r36',name:'Sunita Tamang',number:'9746999328',email:'',type:'Study',sensei:'Manoj Sensei',time:'07:45',lesson:'Lesson 7',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'5650',due:'11300',total:'16950',assign:'',track:''},
- {id:'r37',name:'Suphal Mandal',number:'9824743475',email:'mandalsuphal508@gmail.com',type:'Work',sensei:'Manoj Sensei',time:'06:30',lesson:'Lesson 20',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
+ {id:'r1',name:'Amit Kumar Sharma',number:'9811000629/9768813791',email:'siddharthamit947@gmail.com',type:'Study',sensei:'Manoj Sensei',time:'06:30',lesson:'Lesson 24',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
+ {id:'r2',name:'Amrit Rai',number:'9848802553',email:'aamritrai140@gmail.com',type:'Study',sensei:'Manoj Sensei',time:'06:30',lesson:'Lesson 24',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'5650',due:'11300',total:'16950',assign:'',track:''},
+ {id:'r3',name:'Anusa Ale',number:'9863440442',email:'anushaale88@gmail.com',type:'Study',sensei:'Manoj Sensei',time:'09:00',lesson:'Lesson 37',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'58250',due:'11300',total:'69550',assign:'',track:''},
+ {id:'r4',name:'Asmita Thapa',number:'9813351795',email:'thapaasmita152@gmail.com',type:'Study',sensei:'Manoj Sensei',time:'09:00',lesson:'Lesson 37',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'28550',due:'11000',total:'39550',assign:'',track:''},
+ {id:'r5',name:'Bibek Maharjan',number:'9860924115',email:'bibek.maharjan185@gmail.com',type:'Work',sensei:'Arjun Sensei',time:'07:30',lesson:'Lesson 6',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
+ {id:'r6',name:'Binita Tamang',number:'9745682786',email:'',type:'Work',sensei:'Arjun Sensei',time:'07:30',lesson:'Lesson 6',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
+ {id:'r7',name:'Dinisha Sunar',number:'9744474045',email:'dinishaagri@gmail.com',type:'Work',sensei:'Manoj Sensei',time:'06:30',lesson:'Lesson 24',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'11000',due:'5950',total:'16950',assign:'',track:''},
+ {id:'r8',name:'Dipak Mandal',number:'9824346584',email:'dmdeepak505@gmail.com',type:'Study',sensei:'Manoj Sensei',time:'06:30',lesson:'Lesson 24',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
+ {id:'r10',name:'Ganesh Sah',number:'9702973919',email:'gsah41379@gmail.com',type:'Study',sensei:'Manoj Sensei',time:'06:30',lesson:'Lesson 24',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'5650',due:'11300',total:'16950',assign:'',track:''},
+ {id:'r11',name:'Jaya Biswokarma',number:'9700193622',email:'jayasunar0927@gmail.com',type:'Study',sensei:'Manoj Sensei',time:'06:30',lesson:'Lesson 24',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'15000',due:'1950',total:'16950',assign:'',track:''},
+ {id:'r12',name:'Jeebika Pun Magar',number:'9762225941',email:'',type:'Study',sensei:'Manoj Sensei',time:'07:45',lesson:'Lesson 10',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
+ {id:'r13',name:'Kiran Kumari Khutal Magar',number:'9869810717',email:'',type:'Work',sensei:'Arjun Sensei',time:'07:30',lesson:'Lesson 6',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
+ {id:'r14',name:'Kripa Sunar',number:'9768839316',email:'kripabk29@gmail.com',type:'Work',sensei:'Manoj Sensei',time:'07:45',lesson:'Lesson 10',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'15000',due:'0',total:'15000',assign:'',track:''},
+ {id:'r15',name:'Krishna Bahadur Khadka',number:'9847371971/9808327254',email:'kbha78985@gmail.com',type:'Work',sensei:'Manoj Sensei',time:'06:30',lesson:'Lesson 24',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
+ {id:'r16',name:'Manju Gurung',number:'9824258853',email:'manjugurung595@gmail.com',type:'Study',sensei:'Manoj Sensei',time:'07:45',lesson:'Lesson 10',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
+ {id:'r17',name:'Menuka Kushwar',number:'9765966171/9813626517',email:'menukakuswar0@gmail.com',type:'Study',sensei:'Manoj Sensei',time:'07:45',lesson:'Lesson 10',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'5650',due:'11300',total:'16950',assign:'',track:''},
+ {id:'r18',name:'Prashant Kumar Mishra',number:'9817687600',email:'pm488308@gmail.com',type:'Work',sensei:'Manoj Sensei',time:'09:00',lesson:'Lesson 37',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'22600',due:'0',total:'22600',assign:'',track:''},
+ {id:'r19',name:'Puja Thapa',number:'9749211550',email:'pujat0330@gmail.com',type:'Work',sensei:'Manoj Sensei',time:'06:30',lesson:'Lesson 24',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'11000',due:'0',total:'11000',assign:'',track:''},
+ {id:'r20',name:'Raj Pakhoin Lama',number:'9707127289',email:'lraj4104@gmail.com',type:'Work',sensei:'Manoj Sensei',time:'07:45',lesson:'Lesson 10',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
+ {id:'r21',name:'Raj Singh',number:'9829966460/9805713917',email:'rajsngh3212@gmail.com',type:'Study',sensei:'Manoj Sensei',time:'06:30',lesson:'Lesson 24',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'5650',due:'11300',total:'16950',assign:'',track:''},
+ {id:'r22',name:'Rajindra Koirala',number:'9867056383',email:'',type:'Work',sensei:'Manoj Sensei',time:'07:45',lesson:'Lesson 10',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'15255',due:'0',total:'15255',assign:'',track:''},
+ {id:'r23',name:'Raju Ghale',number:'9862907196',email:'ghaleraju@03gmail.com',type:'Work',sensei:'Manoj Sensei',time:'06:30',lesson:'Lesson 24',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
+ {id:'r24',name:'Raju Karki',number:'9713718743',email:'',type:'Work',sensei:'Arjun Sensei',time:'06:30',lesson:'Lesson 1',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'14407',due:'0',total:'14407',assign:'',track:''},
+ {id:'r25',name:'Raju Tamang',number:'9768383981',email:'',type:'Work',sensei:'Manoj Sensei',time:'07:45',lesson:'Lesson 10',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
+ {id:'r26',name:'Ram Tamang',number:'9767294174',email:'ramtg324@gmail.com',type:'Study',sensei:'Manoj Sensei',time:'06:30',lesson:'Lesson 24',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'0',due:'16950',total:'16950',assign:'',track:''},
+ {id:'r27',name:'Rohene Sewa',number:'9744291509',email:'rohinisewa73@gmail.com',type:'Work',sensei:'Manoj Sensei',time:'06:30',lesson:'Lesson 24',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
+ {id:'r28',name:'Sabin Shivabhakti',number:'9803583066',email:'',type:'Study',sensei:'Arjun Sensei',time:'11:45',lesson:'Lesson 7',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
+ {id:'r29',name:'Santosh Raut',number:'9829984236',email:'',type:'Work',sensei:'Manoj Sensei',time:'07:45',lesson:'Lesson 10',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'15000',due:'1650',total:'16650',assign:'',track:''},
+ {id:'r30',name:'Sapana Thapa Magar',number:'9849806290',email:'magarsapana974@gmail.com',type:'Work',sensei:'Manoj Sensei',time:'06:30',lesson:'Lesson 24',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
+ {id:'r31',name:'Sharada Thapa',number:'9813271767',email:'thapa.sharada43@gmail.com',type:'Work',sensei:'Arjun Sensei',time:'07:30',lesson:'Lesson 6',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
+ {id:'r32',name:'Sita Karki',number:'9869637883',email:'',type:'Work',sensei:'Arjun Sensei',time:'07:30',lesson:'Lesson 6',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
+ {id:'r33',name:'Sujan Kami',number:'9866090804',email:'',type:'Study',sensei:'Arjun Sensei',time:'06:40',lesson:'Lesson 12',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'5650',due:'11300',total:'16950',assign:'',track:''},
+ {id:'r34',name:'Sumitra Bal Tamang',number:'9802324497',email:'',type:'Work',sensei:'Arjun Sensei',time:'06:30',lesson:'Lesson 1',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
+ {id:'r35',name:'Sumitra Shrestha',number:'9709196853',email:'',type:'Work',sensei:'Arjun Sensei',time:'06:30',lesson:'Lesson 1',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
+ {id:'r36',name:'Sunita Tamang',number:'9746999328',email:'',type:'Study',sensei:'Manoj Sensei',time:'07:45',lesson:'Lesson 10',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'5650',due:'11300',total:'16950',assign:'',track:''},
+ {id:'r37',name:'Suphal Mandal',number:'9824743475',email:'mandalsuphal508@gmail.com',type:'Work',sensei:'Manoj Sensei',time:'06:30',lesson:'Lesson 24',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'16950',due:'0',total:'16950',assign:'',track:''},
  {id:'r38',name:'Juna Kulung',number:'9825362515',email:'',type:'Work',sensei:'Arjun Sensei',time:'09:00',lesson:'Basic',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'0',due:'16950',total:'16950',assign:'',track:''},
  {id:'r39',name:'Puspa Ghale Rayamajhi',number:'9860002548',email:'',type:'Work',sensei:'Arjun Sensei',time:'09:00',lesson:'Basic',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'0',due:'16950',total:'16950',assign:'',track:''},
  {id:'r40',name:'Ganesh Tamang',number:'9849074169',email:'',type:'Work',sensei:'Arjun Sensei',time:'09:00',lesson:'Basic',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'0',due:'16950',total:'16950',assign:'',track:''},
- {id:'r41',name:'Lalit Shah',number:'9829719549',email:'',type:'Study',sensei:'Arjun Sensei',time:'06:30',lesson:'Basic',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'0',due:'16950',total:'16950',assign:'',track:''},
+ {id:'r41',name:'Lalit Shah',number:'9829719549',email:'',type:'Study',sensei:'Arjun Sensei',time:'06:30',lesson:'Lesson 1',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'0',due:'16950',total:'16950',assign:'',track:''},
  {id:'r42',name:'Rim Maya Gurung',number:'9813331025',email:'',type:'Work',sensei:'Arjun Sensei',time:'09:00',lesson:'Basic',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'0',due:'16950',total:'16950',assign:'',track:''},
- {id:'r43',name:'Samiksha Panta',number:'9814737636',email:'samikshapanta599@gmail.com',type:'Study',sensei:'Manoj Sensei',time:'06:30',lesson:'Lesson 20',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'0',due:'16950',total:'16950',assign:'',track:''}
+ {id:'r43',name:'Samiksha Panta',number:'9814737636',email:'samikshapanta599@gmail.com',type:'Study',sensei:'Manoj Sensei',time:'06:30',lesson:'Lesson 24',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'0',due:'16950',total:'16950',assign:'',track:''},
+ {id:'r44',name:'Aman Podel',number:'9744419528',email:'',type:'Work',sensei:'Arjun Sensei',time:'11:45',lesson:'Basic',day1:'Present',day1_date:'',day1_reason:'',day2:'Pending',day2_date:'',day2_reason:'',day3:'Pending',day3_date:'',day3_reason:'',date:'',paid:'0',due:'16950',total:'16950',assign:'',track:''},
 ];
 
 function loadData(){
@@ -2297,16 +2279,16 @@ function doPrint(){
   let trs='';let sn=0;
   gkeys.forEach(gk=>{
     const[sen,tim]=gk.split('||');const grp=grpMap[gk];
-    trs+=`<tr style="background:#333!important;color:#fff!important"><td colspan="${cols.length}" style="padding:4px 6px;font-size:7pt;font-weight:700;text-transform:uppercase">${sen} · ${tim} · ${grp.length} students</td></tr>`;
+    trs+=`<tr style="background:#f4f4f4!important;color:#000!important"><td colspan="${cols.length}" style="padding:6px 8px;font-size:7.5pt;font-weight:800;text-transform:uppercase;border-top:2px solid #000;border-bottom:1px solid #111;">${sen} · ${tim} · ${grp.length} students</td></tr>`;
     grp.forEach(r=>{sn++;trs+=`<tr>${cols.map(c=>{
-      if(c.k==='paid')return`<td style="text-align:right;color:#1a5c2a;font-weight:600">${(+r.paid||0).toLocaleString()}</td>`;
-      if(c.k==='due')return`<td style="text-align:right;color:${+r.due>0?'#8b0000':'#999'};font-weight:${+r.due>0?'600':'400'}">${+r.due>0?(+r.due).toLocaleString():'—'}</td>`;
-      const v=r[c.k];if(c.k==='day1'||c.k==='day2'||c.k==='day3'){const dv=v||'Present';return`<td style="text-align:center;font-weight:700;color:${dv==='Present'?'#1a5c2a':dv==='Absent'?'#8b0000':'#7a5c00'}">${dv}</td>`;}
+      if(c.k==='paid')return`<td style="text-align:right;color:#059669;font-weight:600">${(+r.paid||0).toLocaleString()}</td>`;
+      if(c.k==='due')return`<td style="text-align:right;color:${+r.due>0?'#dc2626':'#9ca3af'};font-weight:${+r.due>0?'600':'400'}">${+r.due>0?(+r.due).toLocaleString():'—'}</td>`;
+      const v=r[c.k];if(c.k==='day1'||c.k==='day2'||c.k==='day3'){const dv=v||'Present';return`<td style="text-align:center;font-weight:700;color:${dv==='Present'?'#059669':dv==='Absent'?'#dc2626':'#d97706'}">${dv}</td>`;}
       if(c.k==='type')return`<td style="text-align:center">${v||'—'}</td>`;
       return`<td>${v||'—'}</td>`;
     }).join('')}</tr>`;});
   });
-  const html=`<!DOCTYPE html><html><head><meta charset="UTF-8"><style>@page{size:A4 landscape;margin:10mm}*{box-sizing:border-box;margin:0;padding:0}tr, th, td { page-break-inside: avoid; } body{font-family:Arial,sans-serif;font-size:8pt;color:#000}.hd{text-align:center;padding-bottom:7px;border-bottom:2px solid #000;margin-bottom:8px}.hd h1{font-size:14pt;font-weight:700;text-transform:uppercase}.hd p{font-size:7.5pt;color:#555}table{width:100%;border-collapse:collapse}th{background:#111!important;color:#fff!important;padding:5px 6px;font-size:7pt;text-align:left;font-weight:700;text-transform:uppercase;border:1px solid #000;-webkit-print-color-adjust:exact;print-color-adjust:exact}td{padding:4px 6px;border:1px solid #ccc;font-size:8pt;vertical-align:middle}tr:nth-child(even) td{background:#f5f5f5!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.ft{margin-top:8px;border-top:1px solid #ccc;padding-top:4px;display:flex;justify-content:space-between;font-size:6.5pt;color:#777}@media print{*{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}}</style></head><body><div class="hd"><h1>Global Management Foundation Pvt. Ltd.</h1><p>Attendance Report · ${today}</p></div><table><thead><tr>${cols.map(c=>`<th>${c.l}</th>`).join('')}</tr></thead><tbody>${trs}</tbody></table><div class="ft"><span>Global Management Foundation Pvt. Ltd.</span><span>Printed: ${new Date().toLocaleString()}</span></div></body></html>`;
+  const html=`<!DOCTYPE html><html><head><meta charset="UTF-8"><style>@page{size:A4 portrait;margin:12mm}*{box-sizing:border-box;margin:0;padding:0}tr, th, td { page-break-inside: avoid; } body{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:8.5pt;line-height:1.4;color:#111}.hd{text-align:center;padding-bottom:12px;border-bottom:2.5px solid #000;margin-bottom:15px}.hd h1{font-size:16pt;font-weight:800;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px}.hd p{font-size:9pt;color:#444;font-weight:500}table{width:100%;border-collapse:collapse}th{background:#000!important;color:#fff!important;padding:7px 8px;font-size:7.5pt;text-align:left;font-weight:700;text-transform:uppercase;border:1px solid #000;-webkit-print-color-adjust:exact;print-color-adjust:exact}td{padding:6px 8px;border:1px solid #ddd;font-size:8pt;vertical-align:middle}tr:nth-child(even) td{background:#fafafa!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.ft{margin-top:15px;border-top:1px solid #000;padding-top:6px;display:flex;justify-content:space-between;font-size:7pt;color:#666;font-style:italic}@media print{*{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}}</style></head><body><div class="hd"><h1>Global Management Foundation Pvt. Ltd.</h1><p>Student Attendance & Fee Status Report · ${today}</p></div><table><thead><tr>${cols.map(c=>`<th>${c.l}</th>`).join('')}</tr></thead><tbody>${trs}</tbody></table><div class="ft"><span>Generated by Attendance Pro — Global Management Foundation</span><span>Printed: ${new Date().toLocaleString()}</span></div></body></html>`;
   const blob=new Blob([html],{type:'text/html;charset=utf-8'});
   const url=URL.createObjectURL(blob);
   const w=window.open(url,'_blank');
@@ -2355,7 +2337,7 @@ const INTAKE_DATA=[
   {sn:11,name:'Randhir Kumar Sah',phone:'9811746719',institute:'Mie Japanese Language Institute',status:'Attended',payment:'Paid',interview:'03-04-2026 | 09:50 AM',flight:'18 April 2026 | 04:35 PM',airport:'Nagoya Airport'},
   {sn:12,name:'Binita Ramauli Magar',phone:'9765415067',institute:'International Pacific University',status:'Attended',payment:'Paid',interview:'—',flight:'08 April 2026 | 02:00 PM',airport:'Haneda Airport'},
   {sn:13,name:'Prince Shrestha',phone:'9823152684',institute:'IPU — Fukuoka',status:'Attended',payment:'Paid',interview:'—',flight:'04 April 2026 | 02:40 PM',airport:'Fukuoka Airport'},
-  {sn:14,name:'Pawan Dhungana',phone:'9816186366',institute:'JPS',status:'—',payment:'Unpaid',interview:'—',flight:'—',airport:'Nagoya Airport'},
+  {sn:14,name:'Pawan Dhungana',phone:'9816186366',institute:'JPS',status:'—',payment:'Unpaid',interview:'—',flight:'19 Apr 2026 at 16:35',airport:'Nagoya Airport'},
   {sn:15,name:'Kamal Karki',phone:'9819304833',institute:'Osaka Bio-Medical College',status:'Attended',payment:'Unpaid',interview:'08-04-2026 | 02:50 PM',flight:'—',airport:'Osaka Airport'}
 ];
 let intakeSearch='',intakeFilterPayment='',intakeFilterAirport='';
@@ -2402,6 +2384,8 @@ const JLPT_DATA=[
   {exam:'NAT',batch:'2026 May 16',sn:1,name:'Jeebika Pun Magar',category:'Study',level:'N5'},
   {exam:'NAT',batch:'2026 May 16',sn:2,name:'Manju Gurung',category:'Study',level:'N5'},
   {exam:'NAT',batch:'2026 May 16',sn:3,name:'Sabin Shivabhakti',category:'Study',level:'N5'},
+  {exam:'NAT',batch:'2026 May 16',sn:4,name:'Sunita Tamang',category:'Study',level:'N5'},
+  {exam:'NAT',batch:'2026 May 16',sn:5,name:'Lalit Shah',category:'Study',level:'N5'},
 ];
 let jlptSearch='',jlptFilterExam='',jlptFilterLevel='';
 function getJlptFiltered(){return JLPT_DATA.filter(r=>{const q=jlptSearch.toLowerCase();if(q&&!r.name.toLowerCase().includes(q)&&!r.level.toLowerCase().includes(q))return false;if(jlptFilterExam&&r.exam!==jlptFilterExam)return false;if(jlptFilterLevel&&r.level!==jlptFilterLevel)return false;return true;});}
@@ -2666,16 +2650,11 @@ function openAddTokyo(){} function getTokyoFiltered(){return[];} function editTo
 
 // ─── OCTOBER INTAKE 2026 — MULTI-SCHOOL ENGINE ──────────────────
 const OCT_SCHOOL_LABELS = {
-  osaka: 'Osaka Bio-Medical College',
   okazaki: 'Okazaki Japanese Language School',
   mie: 'MIE Japanese Language School'
 };
 
 const OCT_DATA = {
-  osaka: [
-    {name:'Amit Kumar Sharma', phone:'9811000629', coe:'Pending', vfs:'Pending', noc:'Pending', fees:'Pending', flight:'Pending'},
-    {name:'Dipak Mandal',      phone:'9824346584', coe:'Pending', vfs:'Pending', noc:'Pending', fees:'Pending', flight:'Pending'},
-  ],
   okazaki: [
     {name:'Ram Tamang', phone:'9767294174', coe:'Pending', vfs:'Pending', noc:'Pending', fees:'Pending', flight:'Pending'},
   ],
@@ -2723,7 +2702,7 @@ function renderOctAllTable() {
   const tbody = document.getElementById('tbody-oct-all');
   if(!tbody) return;
   let sn = 0;
-  const allRows = ['osaka','okazaki','mie'].flatMap(key =>
+  const allRows = ['okazaki','mie'].flatMap(key =>
     (OCT_DATA[key]||[]).map(r => ({...r, school: OCT_SCHOOL_LABELS[key]}))
   );
   tbody.innerHTML = allRows.map(r => `<tr>
@@ -2741,7 +2720,7 @@ function renderOctAllTable() {
 }
 
 function renderMercuryTable() {
-  const all = ['osaka','okazaki','mie'].flatMap(k => OCT_DATA[k]||[]);
+  const all = ['okazaki','mie'].flatMap(k => OCT_DATA[k]||[]);
   const total = all.length;
   ['total','coe','vfs','noc','flt'].forEach(k => {
     const el = document.getElementById('oct-cnt-'+k);
@@ -2753,13 +2732,13 @@ function renderMercuryTable() {
     else if(k==='flt') el.textContent = all.filter(r=>r.flight==='Done').length;
   });
   document.getElementById('tb-mercury').textContent = total;
-  ['osaka','okazaki','mie'].forEach(renderOctSchoolTable);
+  ['okazaki','mie'].forEach(renderOctSchoolTable);
   renderOctAllTable();
 }
 
 function octCopyAll() {
   let text = "🌍 OCTOBER 2026 INTAKE - ALL SCHOOLS\n\n";
-  ['osaka','okazaki','mie'].forEach(key => {
+  ['okazaki','mie'].forEach(key => {
     text += `🏫 ${OCT_SCHOOL_LABELS[key]}\n`;
     const rows = OCT_DATA[key] || [];
     if(rows.length === 0) text += "  (No students)\n";
@@ -2771,7 +2750,7 @@ function octCopyAll() {
   navigator.clipboard.writeText(text).then(() => showToast('✓ Intake data copied to clipboard.'));
 }
 
-let _octSchoolKey = 'osaka';
+let _octSchoolKey = 'okazaki';
 function openAddOctSchool(key) {
   _octSchoolKey = key;
   document.getElementById('octModalTitle').textContent = 'Add Student — ' + OCT_SCHOOL_LABELS[key];
@@ -2846,7 +2825,7 @@ function octPrintAll() {
   pw.document.write(`<html><head><title>October Intake 2026 — All</title><style>body{font-family:sans-serif;padding:24px}table{width:100%;border-collapse:collapse;font-size:11px;margin-top:10px}th,td{border:1px solid #ccc;padding:6px;text-align:left}</style></head><body><h2>🌍 October 2026 Intake — All Schools</h2>`);
   let sn = 0;
   pw.document.write(`<table><thead><tr><th>SN</th><th>School</th><th>Name</th><th>Phone</th><th>COE</th><th>VFS</th><th>NOC</th><th>Fees</th><th>Flight</th></tr></thead><tbody>`);
-  ['osaka','okazaki','mie'].forEach(key => {
+  ['okazaki','mie'].forEach(key => {
     (OCT_DATA[key]||[]).forEach(r => pw.document.write(`<tr><td>${++sn}</td><td>${OCT_SCHOOL_LABELS[key]}</td><td>${r.name}</td><td>${r.phone}</td><td>${r.coe}</td><td>${r.vfs}</td><td>${r.noc}</td><td>${r.fees}</td><td>${r.flight}</td></tr>`));
   });
   pw.document.write(`</tbody></table></body></html>`);
@@ -2854,7 +2833,7 @@ function octPrintAll() {
 }
 function octExportAll() {
   const all = []; let sn = 0;
-  ['osaka','okazaki','mie'].forEach(key => {
+  ['okazaki','mie'].forEach(key => {
     (OCT_DATA[key]||[]).forEach(r => all.push({sn:++sn,school:OCT_SCHOOL_LABELS[key],...r}));
   });
   exportGenericXLSX('October_2026_All', all, ['sn','school','name','phone','coe','vfs','noc','fees','flight'], {sn:'SN',school:'School',name:'Name',phone:'Phone',coe:'COE',vfs:'VFS',noc:'NOC',fees:'Fees',flight:'Flight'});
@@ -3387,7 +3366,7 @@ const REMAIN_DATA = [
   {sn:3,name:'Jaya Biswokarma',phone:'9700193622',age:'22',dob:'2003-04-22',qual:'Bachelor',passyear:'2024',gpa:'2.20',lesson:'Lesson 20',natjlpt:'NAT Exam on April 4'},
   {sn:4,name:'Jeebika Pun Magar',phone:'9762225941',age:'19',dob:'2005-04-25',qual:'12',passyear:'2024',gpa:'2.54',lesson:'Lesson 10',natjlpt:'NAT Exam on May 16'},
   {sn:5,name:'Lalit Sah',phone:'9709434267',age:'24',dob:'2001-10-01',qual:'12',passyear:'—',gpa:'—',lesson:'Lesson 7',natjlpt:'—'},
-  {sn:6,name:'Manju Gurung',phone:'9842588853',age:'23',dob:'2002-10-26',qual:'12',passyear:'2025',gpa:'2.82',lesson:'Lesson 10',natjlpt:'NAT For May 16'},
+  {sn:6,name:'Manju Gurung',phone:'9824258853',age:'23',dob:'2002-10-26',qual:'12',passyear:'2025',gpa:'2.82',lesson:'Lesson 10',natjlpt:'NAT For May 16'},
   {sn:7,name:'Menuka Kushwar',phone:'9765966171',age:'20',dob:'2005-06-16',qual:'12',passyear:'2025',gpa:'2.47',lesson:'Lesson 10',natjlpt:'NAT N5 Pass'},
   {sn:8,name:'Sabin Shivabhakti',phone:'9803583066',age:'21',dob:'2004-08-28',qual:'12',passyear:'2022',gpa:'2.95',lesson:'Lesson 10',natjlpt:'NAT Exam on May 16'},
   {sn:9,name:'Sunita Tamang',phone:'9746999328',age:'21',dob:'2004-12-10',qual:'12',passyear:'2024',gpa:'3.25',lesson:'Lesson 10',natjlpt:'NAT Exam on May 16'},
